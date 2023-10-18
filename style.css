@@ -19,9 +19,11 @@ body{
 
 }
 
+
 img{
 
-    max-width: 100%;
+    max-width: 90%;
+
 }
 
 .container {
@@ -129,18 +131,20 @@ padding: 0 200px;
 }
 
 .header-img{
-    flex-basis: 100%;
-    text-align: center;
+   
+    flex-basis: 50%;
+    text-align:left; 
   
 }
 
 .header-txt{
     flex-basis: 50%;
-    text-align: center;
+    text-align:center;
 }
 
 .header-txt h1{
-    font-size: 90px;
+    text-align:unset;
+    font-size:88px;
     text-transform: uppercase;
     line-height: 1;
     color:#111111;
@@ -152,6 +156,7 @@ padding: 0 200px;
     font-size: 20px;
     text-transform: uppercase;
     margin-bottom: 20px;
+   
 
 }
 
@@ -365,9 +370,36 @@ text-transform: uppercase;
         width: 100%;
     }
 
-    .menu ul li a {
+    .menu .navbar ul li a {
         color: #ffffff;
     }
 
-    #menu:checked ~
+    #menu:checked ~ .navbar {
+        display: initial;
+    }
+
+    .logo{
+        display: none;
+    }
+
+    .submenu:hover #carrito{
+        min-width: 100%;
+    }
+
+    .header {
+        min-height: 0vh;
+    }
+
+    .header-content{
+        padding: 50px 0;
+        flex-direction: column;
+    }
+    .header-img {
+        display: none;
+    }
+
+    .header-txt{
+        flex-basis: 100%;
+        text-align: center;
+    }
 }
