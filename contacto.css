@@ -1,0 +1,52 @@
+body{
+
+    font-size: Arial,Helvetica,sans-serif;
+    min-height: 200vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form{
+
+padding: 50px 55px;
+box-shadow: 0 0 20px rgba(0,0,0,0.2);
+text-align: center;
+width: 340px;
+
+}
+
+.input-group{
+
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+h2 {
+color: rgb(184, 179, 180);
+font-size: 35px;
+
+}
+
+label{
+
+    color: black;
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 15px;
+
+}
+
+input, textarea {
+
+    padding: 17px 25px;
+    border-radius: 25px;
+    margin-bottom: 20px;
+    background-color: bisque;
+    border: 2px solid beige;
+    color: rgba(0,0,0,0.2);
+    outline:none ;
+
+
+}
