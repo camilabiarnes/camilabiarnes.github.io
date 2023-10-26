@@ -1,33 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario</title>
     <link rel="stylesheet" href="contacto.css">
+    <script src="./js/form.js" defer></script>
 </head>
 <body>
     
-    <form>
 
+ 
+<section class="input-group">
+    <form id="formulario" onsubmit="return validarCampos()" method="post">
         <h2> Contacto</h2>
-<div class="input-group">
-  <label for="name"> Nombre</label>
- <imput type="text" name="name" id="name" placeholder="Nombre">
- <label for= "phone"> Telefono</label>
-<imput type="tel" name="phone" id="phone" place holder="Telefono">
-<label for="email"> Email</label>
-<imput type="email" name="email" id="email" placeholder="Email">
-<label for="comentarios"> Comentarios</label>
- <textarea name="comentarios" id="comentarios" cols="30" rows="5" placeholder="Comentatios"></textarea>
-<div class="forms-txt">
-        <a href="#">Politicas de Privacidad </a>
-       <a href="#">Terminos y Condiciones </a>
- </div>
+<div class="form-txt">
+<a href="#"> Politica de Privacidad</a>
+<a href="#">Terminos y Condiciones</a>
+</div>
+ 
 
-  <imput class= "btn" type="submit" value="Enviar">
+<label for="name"> Nombre </label>
+<input type="text" name="name" id="nombre" placeholder="Nombre">
+<p id="errornombre"></p>
+<label for="tel">Telefono </label>
+<input type="tel" name="phone" id="phone" placeholder="Telefono">
+<p id="errortelefono"></p>
+<label for="email"> Email </label>
+<input type="email" name="email" id="email" placeholder="Email">
+<p id="erroremail"></p>
+<label for="message"> Comentarios </label>
+<textarea name="message" cols="30" rows="5" placeholder="Comentarios" > </textarea>
 
-         </div>
-    </form>
+<input class="btn" type="submit" id="mensaje" value="Enviar">
+
+
+</div>
+   
+</form>
+
 </body>
 </html>
