@@ -184,11 +184,11 @@ padding: 0 200px;
 }
 .ofert-img{
     flex-basis: 50%;
-    margin-right: 15px;
+    margin-right: 20px;
 }
 
 .ofert-img img {
-    width: 250px;
+    width: 255px;
 }
 
 .ofert-txt{
@@ -292,6 +292,7 @@ text-transform: uppercase;
     font-size: 16px;
     color: #111111;
 }
+
 
 .blog {
     display: flex;

@@ -3,23 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario</title>
+    <title>Contacto</title>
     <link rel="stylesheet" href="contacto.css">
     <script src="./js/form.js" defer></script>
 </head>
-<body>
-    
 
- 
-<section class="input-group">
+<body>
+
+   
+        <section class="input-group">
     <form id="formulario" onsubmit="return validarCampos()" method="post">
-        <h2> Contacto</h2>
+               <h2> Contacto</h2>
 <div class="form-txt">
 <a href="#"> Politica de Privacidad</a>
 <a href="#">Terminos y Condiciones</a>
 </div>
  
-
 <label for="name"> Nombre </label>
 <input type="text" name="name" id="nombre" placeholder="Nombre">
 <p id="errornombre"></p>
@@ -29,15 +28,46 @@
 <label for="email"> Email </label>
 <input type="email" name="email" id="email" placeholder="Email">
 <p id="erroremail"></p>
+
+
+
+<label class="d-block" id="d-block mt1" for="f_genero">Genero</label>
+<select class="d-block" id="f-genero" name="f_genero">
+<option disabled salected value=""> Seleccionar una opcion </option>
+
+<option> Femenino </option>
+<option> Masculino</option>
+<option> Otro </option>
+
+</Selected>
+
 <label for="message"> Comentarios </label>
 <textarea name="message" cols="30" rows="5" placeholder="Comentarios" > </textarea>
 
 <input class="btn" type="submit" id="mensaje" value="Enviar">
 
+<br> 
 
+<label class="d-block mt1" for="f_tyc"> ¿Acepta los terminos y condiciones?</label>
 </div>
-   
+
+<input class="d-block" id="f_tyc" name= "f_tyc" type="checkbox" />
+</div>
+
+
+
+
 </form>
+</div>
+</section>
+<ul id="ltaErrores">
+
+</ul>
+<footer class="footer">
+
+</footer>
+
+
 
 </body>
 </html>
