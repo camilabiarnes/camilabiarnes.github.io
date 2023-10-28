@@ -10,7 +10,17 @@
 
 <body>
 
-   
+  <header class="header-container">
+<div class="menu-txt">
+    <a href="index.html" class="inicio"> INICIO </a>
+    <label for="menu">
+        <img src="img/menu.png" class="menu-icono" alt="menu">
+    </label>
+</div>
+
+  </header>
+
+   <form action="" method="POST" id="form">
         <section class="input-group">
     <form id="formulario" onsubmit="return validarCampos()" method="post">
                <h2> Contacto</h2>
@@ -28,32 +38,13 @@
 <label for="email"> Email </label>
 <input type="email" name="email" id="email" placeholder="Email">
 <p id="erroremail"></p>
-
-
-
-<label class="d-block" id="d-block mt1" for="f_genero">Genero</label>
-<select class="d-block" id="f-genero" name="f_genero">
-<option disabled salected value=""> Seleccionar una opcion </option>
-
-<option> Femenino </option>
-<option> Masculino</option>
-<option> Otro </option>
-
-</Selected>
-
 <label for="message"> Comentarios </label>
 <textarea name="message" cols="30" rows="5" placeholder="Comentarios" > </textarea>
 
-<input class="btn" type="submit" id="mensaje" value="Enviar">
 
-<br> 
 
-<label class="d-block mt1" for="f_tyc"> ¿Acepta los terminos y condiciones?</label>
-</div>
-
-<input class="d-block" id="f_tyc" name= "f_tyc" type="checkbox" />
-</div>
-
+<button type="submit"> Enviar </button>
+<p class="warnigs" id="warnigs"> </p>
 
 
 

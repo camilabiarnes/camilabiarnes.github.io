@@ -99,11 +99,12 @@ right: 0;
 backdrop-filter: blur(10px);
 top:100%;
 z-index: 1;
-background-color: #4E4B5076;
+background-color: #ffffff;
 padding: 20px;
 min-width: 400px;
 
 }
+
 
 table{
     width: 100%;
