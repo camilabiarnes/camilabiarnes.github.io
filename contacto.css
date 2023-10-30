@@ -51,6 +51,58 @@ body{
  
  
 }
+#menu {
+    display: none;
+    }
+    
+    .menu-icono {
+        width: 25px;
+    }
+    
+    .menu label{
+    
+        cursor: pointer;
+        display: none;
+    }
+    
+    .submenu{
+        position: relative;
+    }
+    .submenu #carrito{
+        display: none;
+    }
+    
+    .submenu:hover #carrito{
+    
+    display: block;
+    position: absolute;
+    right: 0;
+    backdrop-filter: blur(10px);
+    top:100%;
+    z-index: 1;
+    background-color: #ffffff;
+    padding: 20px;
+    min-width: 400px;
+    
+    }
+    
+    
+    table{
+        width: 100%;
+    }
+    
+    th,td{
+        color:#ffffff
+    }
+    .borrar{
+        background-color: #111111;
+        border-radius: 50%;
+        padding: 5px 10px;
+        text-decoration: none;
+        color: #ffffff;
+        cursor: pointer;
+    }
+    
 
 .btn-2{
     display: flex;
@@ -71,14 +123,8 @@ width: 340px;
 background-color: #ffffff;
 }
 
-.input-group{
 
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-}
-
- form h2 {
+ form h1 {
 color: #000000;
 font-size: 35px;
 text-align: center;
@@ -115,11 +161,20 @@ label{
 
 }
 
-.input-group {
+button {
 
-display: flex;
-flex-direction: column;
+    background-color: #343a41;
+    color: #fff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+
+
 }
+ 
+
 
 input, textarea {
 background-color: #ffffff;
@@ -134,47 +189,6 @@ color:#a1a1a1;
 
 
 
-.btn{
-    background-color: #F8F5F2;
-    color: #B0B0B0;
-    font-size: 20px;
-    cursor: pointer;
-}
-
-.btn:hover{
-background-color: #F8F5F2;
-
-}
-
-input[type="submit"]:hover,.button:hover {
-    background-color: #3b3b3b;
-    cursor: pointer;
-}
-
-.resultado {
-    color: #000000;
-    margin-top: 15px;
-    padding: 10px;
-    background-color: #000000;
-    border-radius: 4px;
-    font-weight: bold;
-    font:italic;
-    text-align: center;
-}
 
 
 
-
-
-
-
-@media(max-width:991px) {
-
-    body{
-        padding: 30px;
-    }
-
-    form{
-        width: 100%;
-    }
-}

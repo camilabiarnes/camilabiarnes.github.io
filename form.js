@@ -1,29 +1,39 @@
 document.addEventListener("DOMContentLoaded", function () {
-    function validarFormulario() {
-        let valorName = document.forms["formu"]["nombre"].value;
-        let valorPhone = document.forms["formu"]["phone"].value;
-        let valorEmail = document.forms["formu"]["email"].value;
-        let valorMessage = document.forms["formu"]["message"].value;
-        let result = document.getElementById("resultado");
+    const contactForm = document.getElementById("contactForm");
+    const resultDiv = document.getElementById("result");
 
-     
+    contactForm.addEventListener("submit", function (event) {
+        event.preventDefault();
 
-        if (valorName === "" || valorPhone === "" || valorEmail === "" || valorMessage === "") {
-            result.innerHTML = "<p>Todos los campos son obligatorios.</p>";
-            return false;
+        const nombre = contactForm.nombre.value;
+        const edad = contactForm.edad.value;
+        const email = contactForm.email.value;
+        const mensaje = contactForm.mensaje.value;
+
+        if (!nombre || !edad || !email || !mensaje) {
+            resultDiv.innerHTML = "Por favor, complete todos los campos.";
+            resultDiv.className = "error";
+            resultDiv.style.display = "block";
+        } else if (isNaN(edad) || edad <= 0 || edad > 100) {
+            resultDiv.innerHTML = "La edad no es válida.";
+            resultDiv.className = "error";
+            resultDiv.style.display = "block";
+        } else if (!validateEmail(email)) {
+            resultDiv.innerHTML = "El correo electrónico no es válido.";
+            resultDiv.className = "error";
+            resultDiv.style.display = "block";
+        } else {
+            const mensajeHTML = `
+                <p> Su formulario ha sido enviado correctamente Bienvenido a ICE ${nombre}</p>
+            `;
+            resultDiv.innerHTML = mensajeHTML;
+            resultDiv.className = "success";
+            resultDiv.style.display = "block";
         }
+    });
 
-    
-
-        var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
-        if (!valorEmail.match(emailPattern)) {
-            result.innerHTML = "<p>El email no es válido, asegúrese de escribirlo correctamente.</p>";
-            return false;
-        }
-
-        result.innerHTML = "<p> Genial, ya sos parte de ICE, BIENVENIDO </p>"
-        return false;        
+    function validateEmail(email) {
+        const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+        return email.match(emailRegex);
     }
-
-    document.forms["formu"].onsubmit = validarFormulario;
 });
