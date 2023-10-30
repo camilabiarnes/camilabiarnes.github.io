@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
         let valorMessage = document.forms["formu"]["message"].value;
         let result = document.getElementById("resultado");
 
-        if (valorName === "" || valorPhone === "" || valorEmail === "" || valorMessage === "") {
+        if (valorName === "" || valorPhone === "" || valorEmail === "" || valorMessaje === "" ) {
             result.innerHTML = "<p>Todos los campos son obligatorios.</p>";
             return false;
         }
