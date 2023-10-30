@@ -6,10 +6,14 @@ document.addEventListener("DOMContentLoaded", function () {
         let valorMessage = document.forms["formu"]["message"].value;
         let result = document.getElementById("resultado");
 
-        if (valorName === "" || valorPhone === "" || valorEmail === "" || valorMessaje === "" ) {
+     
+
+        if (valorName === "" || valorPhone === "" || valorEmail === "" || valorMessage === "") {
             result.innerHTML = "<p>Todos los campos son obligatorios.</p>";
             return false;
         }
+
+    
 
         var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
         if (!valorEmail.match(emailPattern)) {
