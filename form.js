@@ -1,61 +1,25 @@
-const enviar = document.getElementById("enviar");
-const datosingresados = document.getElementById("datosIngresados");
-const btnEnviar = documentElementById("btnEnviar")
-const ltaErrores = documentElementById("ltaErrores")
+document.addEventListener("DOMContentLoaded", function () {
+    function validarFormulario() {
+        let valorName = document.forms["formu"]["nombre"].value;
+        let valorPhone = document.forms["formu"]["phone"].value;
+        let valorEmail = document.forms["formu"]["email"].value;
+        let valorMessage = document.forms["formu"]["message"].value;
+        let result = document.getElementById("resultado");
 
-function validar () {
+        if (valorName === "" || valorPhone === "" || valorEmail === "" || valorMessage === "") {
+            result.innerHTML = "<p>Todos los campos son obligatorios.</p>";
+            return false;
+        }
 
-    let nombre = documentElementById("nombre")
-    let nomb = nombre.value.trim ();
-    let phone = document.getElementById ("telefono");
-    let phon = phone.value.trim ();
-    let email = documentElementById ("email");
-    let emai = documentElementById();
-    let f_genero = documentElementById("f-genero");
-    let genero = f_genero.value;
-    let tyc = f_tyc.checked;
-    let errores = [];
-    let campo_error = null;
-    let comentario = documentElementById ("comentarios");
-    let coment = comentario.value.trim ();
+        var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+        if (!valorEmail.match(emailPattern)) {
+            result.innerHTML = "<p>El email no es válido, asegúrese de escribirlo correctamente.</p>";
+            return false;
+        }
 
-    let formulario = documentElementById("formulario") 
-
-    for (v of formulario.querySelectorAll ("input,select,div")) {
-        v.classList.remove("error");
+        result.innerHTML = "<p> Genial, ya sos parte de ICE, BIENVENIDO </p>"
+        return false;        
     }
 
-    if(nombre == ""){
-        errores.push("Falta el Nombre");
-        campo_error = nombre;
-        nombre.classList.add("error");
-
-    }
-
-    if(telefono == ""){
-        errores.push("Falta el Telefono");
-        campo_error = phone;
-        phone.classList.add("error");
-        
-    }
-    if(genero == ""){
-        errores.push("Falta el genero");
-        campo_error = f_genero;
-        f_genero.classList.add("error");
-        
-    }
-
-    if(tyc == ""){
-        errores.push("Debe aceptar los terminos y condiciones");
-        campo_error = f_tyc;
-        f_tyc.parentNode.classList.add("error");
-        
-    }
-
-    ltaErrores.innerHTML ="";
-    if(errores.length>0); {
-        For(let i=0; i<errores.length;i++);
-        let li=document.createElement("li");
-    }
-
-}
+    document.forms["formu"].onsubmit = validarFormulario;
+});
